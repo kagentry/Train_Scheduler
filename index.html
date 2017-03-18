@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Train Scheduler</title>
+		<!-- link to moment.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/af.js"></script>
+		<!-- link to bootstrap  -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Anytime is Train Time</h1>
+				<h3>Choo Choo. Chee Chee</h3>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+					<!-- train schedule -->
+						<div class="panel-heading">Current Train Schedule</div>
+						<div class="panel-body">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Train Name</th>
+										<th>Destination</th>
+										<th>Frequency (min)</th>
+										<th>Next Arrival</th>
+										<th>Minutes Away</th>
+									</tr>
+								</thead>
+								<tbody id="schedule"></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- add new trains -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Add Train</div>
+						<div class="panel-body">
+							<form>
+								<div class="form-group">
+									<label for="name">Train Name</label>
+									<input type="text" class="form-control" id="tname">
+								</div>
+								<div class="form-group">
+									<label for="destination">Destination</label>
+									<input type="text" class="form-control" id="destination">
+								</div>
+								<div class="form-group">
+									<label for="firstTrain">First Train Time (HH:mm - military time)</label>
+									<input type="text" class="form-control" id="firstTrain">
+								</div>
+								<div class="form-group">
+									<label for="frequency">Frequency (min)</label>
+									<input type="text" class="form-control" id="frequency">
+								</div>
+								<button type="submit" class="btn btn-primary" id="addTrain">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- link to firebase api -->
+		<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+		<!-- link to personal javascript file -->
+		<script src="assets/javascript/app.js"></script>
+		<!-- link to include jquery -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	</body>
+</html>
